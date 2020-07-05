@@ -1,0 +1,55 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  @apply rounded-md font-medium bg-blue-300 text-blue-800 border-2 border-transparent;
+  &:hover {
+    @apply border-blue-500 bg-white;
+  }
+}
+
+.section {
+  @apply flex max-w-6xl mx-auto pt-40 pb-20;
+}
+
+#card:hover .fade {
+  @apply visible opacity-100 transition ease-in-out duration-700;
+}
+
+.flex-center {
+  @apply flex items-center;
+}
+
+.active {
+  @apply visible opacity-100 transition ease-in duration-300;
+}
+
+.close {
+  @apply invisible opacity-0;
+}
+
+@variants hover {
+  .blur {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.up {
+  &:hover {
+    @apply transform transition ease-in-out duration-500 -translate-y-1;
+  }
+}
+
+.bhv {
+  &:hover {
+    & .back {
+      @apply active;
+    }
+  }
+}
